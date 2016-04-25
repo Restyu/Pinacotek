@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Inicio</title>
-  <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css/resert.css">
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
 </head>
 <body>
     <header>
       <nav>
-        
+
       </nav>
     </header>
 
