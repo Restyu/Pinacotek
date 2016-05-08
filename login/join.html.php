@@ -9,17 +9,17 @@
 <body>
     <div class="container">
 
-      <a id="registro" href="#">Iniciar seción</a>
+      <a id="registro" href=?redirect-login>Iniciar seción</a>
 
       <div class="titulo">
         <h1>Pinacotek</h1>
       </div>
-      <div class="login">
-        <form action="?login" method="post">
-          <input type="email" name="email" value="" placeholder="Correo electronico">
-          <input type="text" name="usuario" value="" placeholder="Nombre de usuario">
-          <input type="password" name="usuario" value="" placeholder="Contraseña">
-          <input type="password" name="usuario" value="" placeholder="Confirmar contraseña">
+      <div class="join">
+        <form class="error" action="?join" method="post">
+          <input type="email" name="email" value="" placeholder="Correo electronico" required="">
+          <input type="text" name="usuario" value="" placeholder="Nombre de usuario" required="">
+          <input type="password" name="pass1" value="" placeholder="Contraseña" required="">
+          <input type="password" name="pass2" value="" placeholder="Confirmar contraseña" required="">
           <button type="submit" name="inicio">Registrate</button>
         </form>
       </div><!-- fin login -->

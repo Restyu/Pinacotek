@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio</title>
+  <title>Document</title>
   <link rel="stylesheet" type="text/css" href="../css/resert.css">
   <link rel="stylesheet" type="text/css" href="../css/home.css">
 </head>
 <body>
-    <header>
+  <div class="container">
+    <div id=titulo>
+      <h1>Pinacotek</h1>
+    </div>
+    <div>
       <nav>
-
+        <ul>
+          <li><a href="#">Cuadros</a></li>
+          <li><a href="">Pintores</a></li>
+          <li><a href="">Museos</a></li>
+          <li><a href="">Mi Cuenta</a></li>
+          <li><a href="">Busqueda</a></li>
+        </ul>
       </nav>
-    </header>
-
-    <h1>vista principal</h1>
-
-    <footer>
-
-    </footer>
+    </div>
+  </div>
 </body>
 </html>
