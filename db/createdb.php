@@ -15,10 +15,10 @@ try{
       nombre    VARCHAR(255) NOT NULL,
       email     VARCHAR(255) NOT NULL,
       pass      VARCHAR(255) NOT NULL,
-      pais	   	VARCHAR(255) NOT NULL,
+      pais	   	VARCHAR(255) NULL,
       F_alta    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       F_baja	  TIMESTAMP NULL DEFAULT NULL,
-      avatar    VARCHAR(255) NOT NULL
+      avatar    VARCHAR(255) NULL
 
     ) DEFAULT CHARACTER SET UTF8 ENGINE=InnoDB";
 
