@@ -5,7 +5,7 @@ require_once '../app/datadb.php';
 require_once '../db/connectdb.php';
 
 $base_path = $_SERVER['DOCUMENT_ROOT'].'/pinacotek/admin/';
-$base_imagen_path = $base_path . "imagenes/";
+$base_imagen_path = $base_path . "imagenes/pintores/";
 
 
 if( isset($_GET['nuevopintor']) ){
@@ -28,7 +28,7 @@ if( isset($_GET['nuevopintor']) ){
     try {
           $sql = "INSERT INTO pintores (ciudad , foto , nombre , pais , muerte , nacimiento , descripcion , apellido) VALUES (:ciudad , :foto , :nombre , :pais , :muerte , :nacimiento , :descripcion , :apellido)";
 
-                  $foto = $base_path.'imagenes/'.$file_name;
+                  $foto = $base_url.'/admin/imagenes/pintores/'.$file_name;
                   $ps = $pdo->prepare($sql);
                   $ps->bindValue(':nombre', $nombre);
                   $ps->bindValue(':apellido', $apellido);
@@ -37,7 +37,7 @@ if( isset($_GET['nuevopintor']) ){
                   $ps->bindValue(':descripcion', $descripcion);
                   $ps->bindValue(':muerte', $muerte);
                   $ps->bindValue(':nacimiento', $nacimiento);
-                  $ps->bindValue(':foto', $file_name);
+                  $ps->bindValue(':foto', $foto);
                   $ps->execute();
 
     } catch (Exception $e) {
