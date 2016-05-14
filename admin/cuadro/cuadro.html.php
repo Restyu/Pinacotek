@@ -8,11 +8,18 @@ require_once '../templates/header.html.php';
         <div class="col-lg-12">
           <div class="col-lg-5">
             <h2>Nuevo cuadro</h2>
-            <div class="form-group <?=$error_email?>">
+            <form class="form-group" action="?nuevocuadro" method="post" enctype="multipart/form-data">
+
               <label>Nombre del cuadro</label>
                 <input type="text" class="form-control" name="cuadro">
-              <label>Nombre del pintor</label>
-                <input type="text" class="form-control" name="pintor">
+                <div class="form-group">
+                  <label for="sel1">Nombre del pintor</label>
+                  <select class="form-control" name="pintor" id="pintor">
+                    <?php foreach($pintores as $pi): ?>
+                      <option value="<?=$pi['id']?>"><?=$pi['nombre']?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
               <label>dimensiones</label>
                 <input type="text" class="form-control" name="dimensiones">
               <label>soporte</label>
@@ -22,13 +29,14 @@ require_once '../templates/header.html.php';
               <label>estilo</label>
                 <input type="text" class="form-control" name="estilo">
               <label>año</label>
-                <input type="text" class="form-control" name="año">
+                <input type="text" class="form-control" name="year">
               <label>siglo</label>
-                  <input type="text" class="form-control" name="siglo">
-              <label>Foto</label>
-                <input type="file" class="form-control btn-file" name="foto">
+                <input type="text" class="form-control" name="siglo">
+              <label for="imagen">imagen</label>
+                  <input type="file" name="imagen" id="imagen" value="">
+
               <button type="submit" class="btn btn-primary">Añadir</button>
-              </div>
+              </form>
             </div>
 
             <div class="col-lg-7">
