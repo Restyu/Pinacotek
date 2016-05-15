@@ -17,7 +17,7 @@
       <div class="join">
         <form class="error" action="?join" method="post">
           <input type="email" name="email" value="" placeholder="Correo electronico" required="">
-          <input type="text" name="usuario" value="" placeholder="Nombre de usuario" required="">
+          <input type="text" name="nombre" value="" placeholder="Nombre de usuario" required="">
           <input type="password" name="pass1" value="" placeholder="Contraseña" required="">
           <input type="password" name="pass2" value="" placeholder="Confirmar contraseña" required="">
           <button type="submit" name="inicio">Registrate</button>
