@@ -45,7 +45,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Link</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Javi <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Configuracion</a></li>
                   <li><a href="#">Ajustes</a></li>

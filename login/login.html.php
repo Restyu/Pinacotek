@@ -1,3 +1,17 @@
+<?php
+
+    if( isset($_SESSION['user']) ){
+        // Si tenemos configurado el usuario en el array de sesión
+        // quiere decir que ya estamos logueado, por lo que no cargamos el formulario de login
+        // y redirigimos a la página welcome
+
+        header('Location: '.$base_url);
+        exit();
+    }else{
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

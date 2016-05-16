@@ -5,6 +5,8 @@ require_once '../../app/datadb.php';
 require_once '../../db/connectdb.php';
 require_once '../../db/usuarios.php';
 
+session_start();
+
 if( isset($_GET['nuevousuario']) ){
 
     $nombre = htmlspecialchars($_POST['nombre'], ENT_QUOTES, 'UTF-8');

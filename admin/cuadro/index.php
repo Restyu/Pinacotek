@@ -5,6 +5,8 @@ require_once '../../app/datadb.php';
 require_once '../../db/connectdb.php';
 require_once '../../db/pintores.php';
 
+session_start();
+
 $base_path = $_SERVER['DOCUMENT_ROOT'].'/pinacotek/admin/';
 
 $base_imagen_path = $base_path . "imagenes/cuadros/";

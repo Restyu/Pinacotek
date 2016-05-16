@@ -1,7 +1,11 @@
 <?php
 
 require_once '../app/info.php';
+require_once $base_path.'app/datadb.php';
 require_once $base_path.'db/connectdb.php';
+require_once $base_path.'db/usuarios.php';
+
+session_start();
 
 if( isset($_GET['join']) ) {
 
@@ -75,16 +79,28 @@ if( isset($_GET['login']) ) {
   $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
   $pass = htmlspecialchars($_POST['pass'], ENT_QUOTES, 'UTF-8');
 
-  echo $email;
-  echo $pass;
+  $pass = md5($pass.$salt);
 
-  exit();
+  // echo $email;
+  // echo $pass;
 
+  $usuario = login($email , $pass);
 
-    ///////////////////////////
-    //    FALTA CODIGO      //
-    /////////////////////////
+  if ($usuario == true) {
+
+    $nombre = $usuario['nombre'];
+
+    $_SESSION['user'] = $nombre;
+    //echo $_SESSION['user'];
+    
+    header('Location: '.$base_url);
+
+  }else{
+
+    header('Location: '.$base_url.'/login');
+    exit();
+  }
 
 }
 
-  require_once $base_path.'login/join.html.php';
+  require_once $base_path.'login/login.html.php';

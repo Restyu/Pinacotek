@@ -1,3 +1,12 @@
+<?php
+
+    if( isset($_SESSION['user']) ){
+          $user = $_SESSION['user'];
+    }else{
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +18,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintores.css">
-
 </head>
 <body>
   <div class="container">
@@ -43,17 +51,19 @@
                   <li><a href="#">Mapa</a></li>
                 </ul>
               </li>
+              <?php  if( isset($_SESSION['user']) ) : ?>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Javi <span class="caret"></span></a>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$user?><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Configuracion</a></li>
                   <li><a href="#">Ajustes</a></li>
                   <li><a href="#">Acerca</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Cerrar session</a></li>
+                  <li><a href="?logout">Cerrar Session</a></li>
                 </ul>
               </li>
-              <div class="input-group busqueda col-lg-4">
+              <?php endif; ?>
+              <div class="input-group busqueda col-lg-5">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
@@ -81,7 +91,7 @@
 
    <div class="row">
      <div class="col-lg-offset-1 col-lg-10">
-  <?php foreach($pintores as $pi): ?>
+       <?php foreach($pintores as $pi): ?>
        <div class="col-sm-5 col-md-3 galeria">
          <div class="thumbnail">
            <img src="<?=$pi['foto']?>" alt="...">
@@ -90,7 +100,7 @@
            </div>
          </div>
        </div>
- <?php endforeach; ?>
+      <?php endforeach; ?>
      </div>
    </div>
 
