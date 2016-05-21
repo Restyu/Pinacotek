@@ -74,6 +74,7 @@ if( isset($_GET['redirect-login']) ) {
   exit();
 }
 
+
 if( isset($_GET['login']) ) {
 
   $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
@@ -92,7 +93,7 @@ if( isset($_GET['login']) ) {
 
     $_SESSION['user'] = $nombre;
     //echo $_SESSION['user'];
-    
+
     header('Location: '.$base_url);
 
   }else{

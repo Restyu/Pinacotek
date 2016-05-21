@@ -63,7 +63,7 @@
                 </ul>
               </li>
               <?php endif; ?>
-              <div class="input-group busqueda col-lg-5">
+              <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>

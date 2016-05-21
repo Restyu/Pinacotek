@@ -94,7 +94,6 @@ try{
       id 			      INT AUTO_INCREMENT PRIMARY KEY,
       id_cuadro     INT,
       id_usuario    INT,
-      valoracion    ENUM('1','2','3','4','5') NOT NULL DEFAULT '5',
       creado        TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       eliminado	    TIMESTAMP NULL DEFAULT NULL,
 
