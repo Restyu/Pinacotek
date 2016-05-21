@@ -28,6 +28,14 @@ function usuarios(){
 return $usuarios;
 }
 
+
+/**
+ * Devuelve el usuario con el id que se le pasa
+ *
+ * @param $id id del usuario
+ * @return  Array con la información del usuario.
+ */
+
 function login($email , $pass){
 
   global $pdo;

@@ -37,7 +37,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right col-lg-7">
-              <li class="active"><a href="http://localhost:8080/pinacotek/pintores">Pintores <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="http://localhost:8080/pinacotek/">Pintores <span class="sr-only">(current)</span></a></li>
               <li><a href="http://localhost:8080/pinacotek/cuadros">Cuadros</a></li>
               <li><a href="http://localhost:8080/pinacotek/favoritos">Colección</a></li>
               <li class="dropdown">
@@ -91,12 +91,12 @@
 
    <div class="row">
      <div class="col-lg-offset-1 col-lg-10">
-       <?php foreach($pintores as $pi): ?>
+       <?php foreach($cuadros as $cu): ?>
        <div class="col-sm-5 col-md-3 galeria">
          <div class="thumbnail">
-           <img src="<?=$pi['foto']?>" alt="...">
+           <img src="<?=$cu['foto']?>" alt="...">
            <div class="caption">
-             <h3><?=$pi['nombre']?></h3>
+             <h3><?=$cu['nombre']?></h3>
            </div>
          </div>
        </div>
