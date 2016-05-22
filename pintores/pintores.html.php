@@ -82,7 +82,7 @@
        </div>
        <div class="col-lg-7">
           <h4>orden</h4>
-          <form class="?ordenar" action="index.html" method="post">
+          <form action="index.html" method="post">
 
           </form>
        </div>

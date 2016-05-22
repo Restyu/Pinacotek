@@ -5,7 +5,7 @@ function cuadros(){
   global $pdo;
 
   try {
-      $sql = 'SELECT * FROM cuadros';
+      $sql = 'SELECT cuadros.nombre , pintores.nombre as pintor , cuadros.estilo , cuadros.soporte , cuadros.foto  FROM cuadros JOIN pintores on cuadros.id_pintor = pintores.id';
       $ps = $pdo->prepare($sql);
       $ps->execute();
   }catch (Exception $e) {

@@ -23,7 +23,8 @@
 <body>
     <div class="container">
 
-      <a id="registro" href="#">Regístrate</a>
+
+      <a id="registro" href=?redirect-join>Regístrate</a>
 
       <div class="titulo">
         <h1>Pinacotek</h1>
