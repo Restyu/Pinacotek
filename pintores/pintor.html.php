@@ -104,8 +104,8 @@
 
     <div class="row">
       <div class="col-lg-offset-1 col-lg-10 ">
-        <?php foreach($cuadros as $cu): ?>
-        <div class="col-sm-5 col-md-4 galeria">
+        <?php foreach($cuadrospintor as $cu): ?>
+        <div class="col-sm-5 col-md-4">
           <div class="thumbnail">
             <img src="<?=$cu['foto']?>" alt="...">
             <div class="caption">
@@ -116,10 +116,8 @@
           </div>
         </div>
        <?php endforeach; ?>
-      </div>
-    </div>
-
-
+      </div><!-- col-lg-offset-1 col-lg-10 -->
+    </div><!-- fin row -->
  </div><!-- fin container -->
 </body>
 </html>

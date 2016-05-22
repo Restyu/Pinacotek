@@ -25,7 +25,8 @@ if( isset($_GET['pintor']) ) {
 
   $pintor = pintor($id);
   $numcuadro = numcuadros($id);
-  $cuadros = cuadros();
+  //$cuadros = cuadros();
+  $cuadrospintor = cuadrospintor($id);
 
   //var_dump($pintor);
 

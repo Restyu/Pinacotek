@@ -1,7 +1,7 @@
 <?php
 
 /**
- * se obtienen los usuarios de la base de datos.
+ * se obtienen los pintores de la base de datos.
  *
  * @return array
  */
@@ -54,6 +54,14 @@ function pintor($id){
   return $pintor;
 }
 
+
+/**
+ * Calcula el numero de cuadros del id del pintor que se le pasa como parametro.
+ *
+ * @param $id id del pintor
+ * @return  Numero de cuadros.
+ */
+
 function numcuadros($id){
 
   global $pdo;
@@ -73,4 +81,36 @@ function numcuadros($id){
   $numcuadro = $ps->fetch(PDO::FETCH_ASSOC);
 
   return $numcuadro;
+}
+
+
+/**
+ * Calcula el numero de cuadros del id del pintor que se le pasa como parametro.
+ *
+ * @param $id id del pintor.
+ * @return  Cuadros del pintor.
+ */
+
+function cuadrospintor($id){
+
+  global $pdo;
+
+  try {
+
+      $sql = 'SELECT cuadros.nombre as nombre , pintores.nombre as pintor , cuadros.estilo as estilo , cuadros.soporte as soporte , cuadros.foto as foto FROM pintores JOIN cuadros on pintores.id = cuadros.id_pintor where pintores.id = :id';
+      $ps = $pdo->prepare($sql);
+      $ps->bindValue(':id', $id);
+      $ps->execute();
+
+  } catch (Exception $e) {
+
+      die("No se han podido cargar el pintor de la base de datos:". $e->getMessage());
+  }
+
+  while( $row = $ps->fetch(PDO::FETCH_ASSOC) ){
+    $cuadrospintor[] = $row;
+  }
+
+  return $cuadrospintor;
+
 }
