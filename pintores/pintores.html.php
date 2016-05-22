@@ -18,6 +18,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintores.css">
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="container">
@@ -96,7 +97,12 @@
          <div class="thumbnail">
            <img src="<?=$pi['foto']?>" alt="...">
            <div class="caption">
-             <h3><?=$pi['nombre']?></h3>
+             <form id="pintor" action="?pintor" method="post">
+               <input type="hidden" name="id" value="<?=$pi['id']?>">
+               <?php echo  $pi['id']?>
+               <!-- <a href="#" onclick="document.getElementById('pintor').submit()"><?=$pi['nombre']?></a> -->
+               <button type="submit" name="enviar"><?=$pi['nombre']?></button>
+             </form>
            </div>
          </div>
        </div>

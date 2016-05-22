@@ -74,7 +74,7 @@ if( isset($_GET['redirect-login']) ) {
   exit();
 }
 
-// REDIRECIONA A LOGIN DESDE EL INDEX.PHP
+// REDIRECIONA A JOIN DESDE EL INDEX.PHP
 if( isset($_GET['redirect-join']) ) {
 
   require_once $base_path.'login/join.html.php';

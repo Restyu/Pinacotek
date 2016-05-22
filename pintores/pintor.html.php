@@ -17,7 +17,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintores.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintor.css">
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="container">
@@ -75,20 +76,49 @@
       </nav>
     </div><!-- fin row -->
 
-   <div class="row">
-     <div class="col-lg-offset-1 col-lg-10">
-       <?php foreach($pintores as $pi): ?>
-       <div class="col-sm-5 col-md-3 galeria">
-         <div class="thumbnail">
-           <img src="<?=$pi['foto']?>" alt="...">
-           <div class="caption">
-             <h3><?=$pi['nombre']?></h3>
-           </div>
-         </div>
-       </div>
-      <?php endforeach; ?>
-     </div>
-   </div>
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10">
+          <div class="col-lg-10">
+            <h1><?=$pintor['apellido']?></h1>
+            <h2><?=$pintor['ciudad']?> , <?=$pintor['nacimiento']?> - <?=$pintor['muerte']?></h2>
+            <p><?=$pintor['descripcion']?> </p>
+          </div>
+          <div class="col-lg-2 etiquetas">
+            <h3>Etiquetas</h3>
+
+              <span class="tags"><?=$pintor['nombre']?></span>
+              <span class="tags"><?=$pintor['nacimiento']?></span>
+
+              <span class="tags"><?=$pintor['muerte']?></span>
+              <span class="tags"><?=$pintor['pais']?></span>
+
+          </div><!-- fin etiquetas -->
+      </div><!-- col-lg-offset-1 col-lg-10 -->
+    </div><!-- fin row -->
+
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 numcuadros">
+          <h3 class="obras">Obras (<?=$numcuadro['numcuadro']?>)</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 ">
+        <?php foreach($cuadros as $cu): ?>
+        <div class="col-sm-5 col-md-4 galeria">
+          <div class="thumbnail">
+            <img src="<?=$cu['foto']?>" alt="...">
+            <div class="caption">
+              <h4><?=$cu['nombre']?></h4>
+              <h5><?=$cu['estilo']?> sobre <?=$cu['soporte']?></h5>
+              <h6><?=$cu['pintor']?></h6>
+            </div>
+          </div>
+        </div>
+       <?php endforeach; ?>
+      </div>
+    </div>
+
 
  </div><!-- fin container -->
 </body>

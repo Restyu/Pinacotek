@@ -32,7 +32,7 @@ try{
       apellido      VARCHAR(255) NOT NULL,
       nacimiento    INT NULL,
       muerte        INT NULL,
-      descripcion   VARCHAR(255) NOT NULL,
+      descripcion   VARCHAR(900) NOT NULL,
       pais          VARCHAR(255) NOT NULL,
       ciudad        VARCHAR(255) NOT NULL,
       foto          VARCHAR(255) NOT NULL,
