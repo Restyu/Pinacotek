@@ -85,8 +85,7 @@ function numcuadros($id){
 
 
 /**
- * Calcula el numero de cuadros del id del pintor que se le pasa como parametro.
- *
+ * Devuelve los cuadros del id del pintor que se le pasa como parametros .
  * @param $id id del pintor.
  * @return  Cuadros del pintor.
  */
@@ -97,7 +96,7 @@ function cuadrospintor($id){
 
   try {
 
-      $sql = 'SELECT cuadros.nombre as nombre , pintores.nombre as pintor , cuadros.estilo as estilo , cuadros.soporte as soporte , cuadros.foto as foto FROM pintores JOIN cuadros on pintores.id = cuadros.id_pintor where pintores.id = :id';
+      $sql = 'SELECT cuadros.id , cuadros.nombre as nombre , pintores.nombre as pintor , cuadros.estilo as estilo , cuadros.soporte as soporte , cuadros.foto as foto FROM pintores JOIN cuadros on pintores.id = cuadros.id_pintor where pintores.id = :id';
       $ps = $pdo->prepare($sql);
       $ps->bindValue(':id', $id);
       $ps->execute();

@@ -6,6 +6,19 @@ require_once '../db/cuadros.php';
 
 session_start();
 
+if ( isset($_POST['infocuadro']) ) {
+
+	$id_cuadro = $_POST['infocuadro'];
+
+  //var_dump($_POST);
+
+  $cuadro = cuadro($id_cuadro);
+
+  require_once 'cuadro.html.php';
+  exit();
+
+}
+
 if( isset($_GET['logout']) ){
 
     // Se destruye la variable de sesión

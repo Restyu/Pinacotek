@@ -14,10 +14,12 @@
   <title>Pinacotek | Admin</title>
   <link rel="stylesheet" type="text/css" href="css/resert.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+  <!-- Link alternativo al de arriba por si no carga  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintor.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/cuadro.css">
   <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -38,7 +40,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right col-lg-7">
-              <li class="active"><a href="http://localhost:8080/pinacotek/pintores">Pintores <span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="http://localhost:8080/pinacotek/">Pintores <span class="sr-only">(current)</span></a></li>
               <li><a href="http://localhost:8080/pinacotek/cuadros">Cuadros</a></li>
               <li><a href="http://localhost:8080/pinacotek/favoritos">Colección</a></li>
               <li class="dropdown">
@@ -73,54 +75,40 @@
             </ul><!-- nav navbar-nav navbar-right col-lg-7 -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-      </nav>
+      </nav><!-- / navbar navbar-default -->
     </div><!-- fin row -->
 
     <div class="row">
-      <div class="col-lg-offset-1 col-lg-10">
-          <div class="col-lg-10">
-            <h1><?=$pintor['apellido']?></h1>
-            <h2><?=$pintor['ciudad']?> , <?=$pintor['nacimiento']?> - <?=$pintor['muerte']?></h2>
-            <p><?=$pintor['descripcion']?> </p>
-          </div>
-          <div class="col-lg-2 etiquetas">
-            <h3>Etiquetas</h3>
-
-              <span class="tags"><?=$pintor['nombre']?></span>
-              <span class="tags"><?=$pintor['nacimiento']?></span>
-
-              <span class="tags"><?=$pintor['muerte']?></span>
-              <span class="tags"><?=$pintor['pais']?></span>
-
-          </div><!-- fin etiquetas -->
-      </div><!-- col-lg-offset-1 col-lg-10 -->
-    </div><!-- fin row -->
-
-    <div class="row">
-      <div class="col-lg-offset-1 col-lg-10 numcuadros">
-          <h3 class="obras">Obras (<?=$numcuadro['numcuadro']?>)</h3>
+      <div class="col-lg-offset-1 col-lg-10 ficha">
+          <h3 class="obras">FICHA TECNICA</h3>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-offset-1 col-lg-10 ">
-        <?php foreach($cuadrospintor as $cu): ?>
-        <div class="col-sm-5 col-md-4">
-          <div class="thumbnail">
-            <img src="<?=$cu['foto']?>" alt="...">
-            <div class="caption">
-              <form id="cuadro" action="<?=$base_url?>/cuadros/" method="post">
-                <input type="hidden" name="infocuadro" value="<?=$cu['id']?>">
-                <button type="submit" name="enviar"><?=$cu['nombre']?></button>
-              </form>
-              <h5><?=$cu['estilo']?> sobre <?=$cu['soporte']?></h5>
-              <h6><?=$cu['pintor']?></h6>
-            </div>
-          </div>
-        </div>
-       <?php endforeach; ?>
-      </div><!-- col-lg-offset-1 col-lg-10 -->
     </div><!-- fin row -->
+
+    <div class="row col-lg-offset-1 col-lg-10 vista">
+      <div class="col-xs-6 col-md-7 cuadro">
+        <a href="#" class="thumbnail">
+          <img src="<?=$cuadro['foto']?>" alt="...">
+        </a>
+      </div>
+      <div class="col-lg-5">
+            <h1>Pintor</h1>
+            <h2><?=$cuadro['nombre']?></h2>
+            <h1>Titulo</h1>
+            <h2><?=$cuadro['nombre']?></h2>
+            <h1>Fecha</h1>
+            <h2><?=$cuadro['year']?></h2>
+            <h1>Tecnica</h1>
+            <h2><?=$cuadro['estilo']?></h2>
+            <h1>Soporte</h1>
+            <h2><?=$cuadro['soporte']?></h2>
+            <h1>Tema</h1>
+            <h2><?=$cuadro['tema']?></h2>
+            <h1>Dimensiones</h1>
+            <h2><?=$cuadro['dimensiones']?></h2>
+      </div><!-- col-lg-5 -->
+    </div><!-- row col-lg-offset-1 col-lg-10 vista -->
+
+
  </div><!-- fin container -->
 </body>
 </html>

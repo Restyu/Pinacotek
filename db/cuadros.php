@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * se obtienen los cuadros de la base de datos.
+ *
+ * @return array
+ */
+
 function cuadros(){
 
   global $pdo;
@@ -17,4 +23,32 @@ function cuadros(){
   }
 
 return $cuadros;
+}
+
+
+
+/**
+ * Devuelve los cuadros del id del pintor que se le pasa como parametros .
+ * @param $id id del cuadro.
+ * @return  informacion del cuadro.
+ */
+
+function cuadro($id){
+
+  global $pdo;
+
+  try {
+      $sql = 'SELECT * FROM cuadros WHERE id = :id';
+      $ps = $pdo->prepare($sql);
+      $ps->bindValue(':id', $id);
+      $ps->execute();
+
+  }catch (Exception $e) {
+
+      die("No se han podido cargar los cuadros de la base de datos:". $e->getMessage());
+  }
+
+  $cuadro = $ps->fetch(PDO::FETCH_ASSOC);
+
+  return $cuadro;
 }

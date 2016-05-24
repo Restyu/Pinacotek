@@ -1,0 +1,43 @@
+
+h1 {
+  font-size: 20px;
+  font-family: 'EB Garamond', serif;
+
+}
+
+h2 {
+  font-size: 18px;
+  font-family: 'EB Garamond', serif;
+  color: #878787;
+  border-bottom: 1px solid #878787;
+  margin-top: -5px;
+}
+
+h3 {
+  font-size: 30px;
+  font-family: 'EB Garamond', serif;
+}
+
+
+.ficha {
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.vista {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.cuadro {
+  padding-left: 0px;
+
+}
+
+.thumbnail {
+
+  border: none;
+}

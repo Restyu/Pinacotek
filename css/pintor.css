@@ -22,9 +22,15 @@ h4:hover {
   color: #922f3e;
 }
 
+h5 {
+  margin: -2.5%;
+  margin-bottom: 15px;
+}
+
 h6 {
   color: #944c4c;
   font-size: 12px;
+  margin: -2.5%;
 }
 
 h6:hover {
@@ -33,6 +39,22 @@ h6:hover {
 
 p {
   font-size: 20px;
+}
+
+button {
+  border: none;
+  color: #000;
+  font-family: 'EB Garamond', serif;
+  background-color: #fff;
+  text-align: left;
+  font-size: 25px;
+  padding-left: 0px;
+  margin: -2.5%;
+  margin-bottom: 7px;
+}
+
+button:hover{
+  color: #922f3e;
 }
 
 .tags {
