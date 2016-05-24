@@ -1,7 +1,7 @@
 <?php
 
 // Si accedemos a la página welcome: http://localhost:8080/pinacotek/admin/pintor
-// sin habernos logueado, nos redirigirá a la página de error
+// sin habernos logueado, nos redirigirá a la página de principal
 if( isset($_SESSION['user']) == 'admin' ){
 
     $user = $_SESSION['user'];
@@ -102,7 +102,31 @@ require_once '../templates/header.html.php';
                       <td><?=$us['nombre']?></td>
                       <td><?=$us['email']?></td>
                       <td><?=$us['pass']?></td>
-                      <td>borrar</td>
+                      <td class="listicon">
+                        <button type="button" class="btn btn-primary btn-link btn-sm listiconbutton" data-placement="top" data-toggle="modal tooltip" title="Tooltip on top" data-target="#myModal">
+                          <i class="glyphicon glyphicon-trash"></i>
+                        </button>
+                        <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button> -->
+                        <!-- Vntana de dialogo  -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Eliminar usuario</h4>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <form action="?borrar" class="formulario" method="post">
+                                  <input type="hidden" name="id_usuario" value="<?=$us['id']?>">
+                                  <button type="submit" class="btn btn-danger">Borrar</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+
                    </tr>
                  <?php endforeach; ?>
                </tbody>
@@ -113,4 +137,9 @@ require_once '../templates/header.html.php';
  </div>
 </div>
 </body>
+  <!-- <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script> -->
 </html>

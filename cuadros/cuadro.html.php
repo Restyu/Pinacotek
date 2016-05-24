@@ -107,8 +107,6 @@
             <h2><?=$cuadro['dimensiones']?></h2>
       </div><!-- col-lg-5 -->
     </div><!-- row col-lg-offset-1 col-lg-10 vista -->
-
-
  </div><!-- fin container -->
 </body>
 </html>

@@ -70,6 +70,29 @@ if( isset($_GET['nuevousuario']) ){
     exit();
 }
 
+if ( isset($_GET['borrar']) ){
+
+	$id = $_POST['id_usuario'];
+
+	if ( is_numeric($id) ) {
+
+    try {
+
+			$sql = "DELETE FROM usuarios WHERE id = :id";
+			$ps = $pdo->prepare($sql);
+			$ps->bindValue(':id', $id);
+			$ps->execute();
+
+		} catch (PDOException $e) {
+
+			echo "No se ha podido borrar el usuario";
+			exit();
+		}
+	}
+
+	header('Location: .');
+	exit();
+}
 
 $usuarios = usuarios();
 require_once 'usuarios.html.php';
