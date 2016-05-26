@@ -40,7 +40,9 @@
             <ul class="nav navbar-nav navbar-right col-lg-7">
               <li class="active"><a href="http://localhost:8080/pinacotek/pintores">Pintores <span class="sr-only">(current)</span></a></li>
               <li><a href="http://localhost:8080/pinacotek/cuadros">Cuadros</a></li>
+              <?php  if( isset($_SESSION['user']) ) : ?>
               <li><a href="http://localhost:8080/pinacotek/favoritos">Colección</a></li>
+              <?php endif; ?>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museos <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -63,6 +65,9 @@
                   <li><a href="?logout">Cerrar Session</a></li>
                 </ul>
               </li>
+              <?php endif; ?>
+              <?php  if( !isset($_SESSION['user']) ) : ?>
+                  <li><a href="http://localhost:8080/pinacotek/login">Login</a></li>
               <?php endif; ?>
               <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">
