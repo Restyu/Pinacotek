@@ -2,6 +2,7 @@
 
     if( isset($_SESSION['user']) ){
           $user = $_SESSION['user'];
+          $id_user = $_SESSION['id'];
     }else{
 
     }
@@ -12,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Pinacotek | Admin</title>
-  <link rel="stylesheet" type="text/css" href="css/resert.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/resert.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
   <!-- Link alternativo al de arriba por si no carga  -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -90,6 +91,7 @@
           <img src="<?=$cuadro['foto']?>" alt="...">
         </a>
       </div>
+
       <div class="col-lg-5">
             <h1>Pintor</h1>
             <h2><?=$cuadro['nombre']?></h2>
@@ -107,6 +109,15 @@
             <h2><?=$cuadro['dimensiones']?></h2>
       </div><!-- col-lg-5 -->
     </div><!-- row col-lg-offset-1 col-lg-10 vista -->
+    
+    <form class=favorito action="?favorito" method="post">
+      <input type="hidden" name="id_cuadro" value="<?=$cuadro['id']?>">
+      <input type="hidden" name="id_usuario" value="<?=$id_user?>">
+      <button type="submit" class="btn btn-link ">
+        <i class="glyphicon glyphicon-heart"></i>
+      </button>
+    </form>
+
  </div><!-- fin container -->
 </body>
 </html>

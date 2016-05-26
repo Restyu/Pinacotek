@@ -11,7 +11,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pinacotek | Admin</title>
+  <title>Pinacotek | Home</title>
   <link rel="stylesheet" type="text/css" href="css/resert.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -63,6 +63,9 @@
                   <li><a href="?logout">Cerrar Session</a></li>
                 </ul>
               </li>
+              <?php endif; ?>
+              <?php  if( !isset($_SESSION['user']) ) : ?>
+                  <li><a href="http://localhost:8080/pinacotek/login">Login</a></li>
               <?php endif; ?>
               <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">

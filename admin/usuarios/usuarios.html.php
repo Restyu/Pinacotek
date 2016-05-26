@@ -103,10 +103,9 @@ require_once '../templates/header.html.php';
                       <td><?=$us['email']?></td>
                       <td><?=$us['pass']?></td>
                       <td class="listicon">
-                        <button type="button" class="btn btn-primary btn-link btn-sm listiconbutton" data-placement="top" data-toggle="modal tooltip" title="Tooltip on top" data-target="#myModal">
+                        <button type="button" class="btn btn-primary btn-link btn-sm listiconbutton" data-toggle="modal" data-target="#myModal">
                           <i class="glyphicon glyphicon-trash"></i>
                         </button>
-                        <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button> -->
                         <!-- Vntana de dialogo  -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
@@ -124,7 +123,7 @@ require_once '../templates/header.html.php';
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div><!-- fin modal fade  -->
                       </td>
 
                    </tr>
@@ -137,9 +136,4 @@ require_once '../templates/header.html.php';
  </div>
 </div>
 </body>
-  <!-- <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-  </script> -->
 </html>

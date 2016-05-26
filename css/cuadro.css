@@ -18,6 +18,16 @@ h3 {
   font-family: 'EB Garamond', serif;
 }
 
+.thumbnail > img {
+  height: 600px;
+  width: 600px;
+}
+
+i {
+  background: #E6A18C;
+  padding: 10px;
+  border-radius: 50%;
+}
 
 .ficha {
   border-bottom: 1px solid black;
@@ -40,4 +50,14 @@ h3 {
 .thumbnail {
 
   border: none;
+}
+
+.btn-link:hover{
+  color: #CE2929;
+}
+
+.favorito {
+  position: relative;
+  right:40%;
+  top: 550px;
 }

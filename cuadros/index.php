@@ -6,6 +6,7 @@ require_once '../db/cuadros.php';
 
 session_start();
 
+// Recibe el parametro enviado de pintor.php.html
 if ( isset($_POST['infocuadro']) ) {
 
 	$id_cuadro = $_POST['infocuadro'];

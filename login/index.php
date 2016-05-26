@@ -95,12 +95,18 @@ if( isset($_GET['login']) ) {
 
   $usuario = login($email , $pass);
 
+  //var_dump($usuario);
+
+  $id_usuario = $usuario['id'];
+
+
   if ($usuario == true) {
 
     $nombre = $usuario['nombre'];
 
     $_SESSION['user'] = $nombre;
-    //echo $_SESSION['user'];
+    $_SESSION['id'] = $id_usuario;
+    echo $_SESSION['id'];
 
     header('Location: '.$base_url);
 
