@@ -4,6 +4,7 @@ require_once '../app/info.php';
 require_once $base_path.'app/datadb.php';
 require_once $base_path.'db/connectdb.php';
 require_once $base_path.'db/usuarios.php';
+//require '../mail/list/PHPMailer/PHPMailerAutoload.php';
 
 session_start();
 
@@ -58,7 +59,8 @@ if( isset($_GET['join']) ) {
     } catch (Exception $e) {
         die("No se ha podido guardar la tarea en la base de datos:". $e->getMessage());
     }
-    header("Location: .");
+    require_once '../mail_sent.html.php';
+    //header("Location: .");
     exit();
 
   }
