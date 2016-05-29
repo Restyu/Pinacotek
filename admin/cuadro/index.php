@@ -64,6 +64,12 @@ if( isset($_GET['nuevocuadro']) ){
     move_uploaded_file($file_tmp, $base_imagen_path . $file_name);
 }
 
+
+if( isset($_GET['listacuadro']) ){
+  
+  require_once 'listacuadro.html.php';
+}
+
 $pintores = pintores();
 
 require_once 'cuadro.html.php';

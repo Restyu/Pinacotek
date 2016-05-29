@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 require_once 'app/info.php';
 require_once 'app/pass.php';

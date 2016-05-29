@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/pintor.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/header.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/pintor.css">
   <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -33,15 +33,15 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:8080/pinacotek">Pinacotek</a>
+            <a class="navbar-brand" href="<?=$admin_url?>">Pinacotek</a>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right col-lg-7">
-              <li class="active"><a href="http://localhost:8080/pinacotek/pintores">Pintores <span class="sr-only">(current)</span></a></li>
-              <li><a href="http://localhost:8080/pinacotek/cuadros">Cuadros</a></li>
+              <li class="active"><a href="<?=$admin_url?>pintores">Pintores <span class="sr-only">(current)</span></a></li>
+              <li><a href="<?=$admin_url?>cuadros">Cuadros</a></li>
               <?php  if( isset($_SESSION['user']) ) : ?>
-              <li><a href="http://localhost:8080/pinacotek/favoritos">Colección</a></li>
+              <li><a href="<?=$admin_url?>favoritos">Colección</a></li>
               <?php endif; ?>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museos <span class="caret"></span></a>
@@ -67,7 +67,7 @@
               </li>
               <?php endif; ?>
               <?php  if( !isset($_SESSION['user']) ) : ?>
-                  <li><a href="http://localhost:8080/pinacotek/login">Login</a></li>
+                  <li><a href="<?=$admin_url?>login">Login</a></li>
               <?php endif; ?>
               <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">
