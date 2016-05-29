@@ -9,3 +9,9 @@ nav{
 .lista{
   margin-top: 32px;
 }
+
+.listacuadros {
+  border: none;
+  background: none;
+  margin-left: 13px;
+}

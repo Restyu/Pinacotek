@@ -11,7 +11,7 @@ function cuadros(){
   global $pdo;
 
   try {
-      $sql = 'SELECT cuadros.nombre , pintores.nombre as pintor , cuadros.estilo , cuadros.soporte , cuadros.foto  FROM cuadros JOIN pintores on cuadros.id_pintor = pintores.id';
+      $sql = 'SELECT cuadros.id , cuadros.nombre , pintores.nombre as pintor , cuadros.estilo , cuadros.soporte , cuadros.foto , cuadros.dimensiones , cuadros.year  , cuadros.siglo FROM cuadros JOIN pintores on cuadros.id_pintor = pintores.id';
       $ps = $pdo->prepare($sql);
       $ps->execute();
   }catch (Exception $e) {

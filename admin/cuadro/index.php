@@ -4,6 +4,7 @@ require_once '../../app/info.php';
 require_once '../../app/datadb.php';
 require_once '../../db/connectdb.php';
 require_once '../../db/pintores.php';
+require_once '../../db/cuadros.php';
 
 session_start();
 
@@ -64,10 +65,36 @@ if( isset($_GET['nuevocuadro']) ){
     move_uploaded_file($file_tmp, $base_imagen_path . $file_name);
 }
 
+if( isset($_POST['lista']) ){
 
-if( isset($_GET['listacuadro']) ){
-  
-  require_once 'listacuadro.html.php';
+  $cuadros = cuadros();
+
+  require_once 'listacuadros.html.php';
+  exit();
+}
+
+if ( isset($_GET['borrar']) ){
+
+	$id = $_POST['id_cuadro'];
+
+	if ( is_numeric($id) ) {
+
+    try {
+
+			$sql = "DELETE FROM cuadros WHERE id = :id";
+			$ps = $pdo->prepare($sql);
+			$ps->bindValue(':id', $id);
+			$ps->execute();
+
+		} catch (PDOException $e) {
+
+			echo "No se ha podido borrar el cuadro";
+			exit();
+		}
+	}
+
+	header('Location: .');
+	exit();
 }
 
 $pintores = pintores();

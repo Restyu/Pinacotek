@@ -32,7 +32,11 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuadros <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Lista cuadros</a></li>
+                  <form action="<?=$admin_url?>admin/cuadro/" method="post">
+                    <input type="hidden" name="lista" value="8">
+                    <button class="listacuadros" type="submit" name="button">Lista cuadros</button>
+                  </form>
+
                   <li><a href="<?=$admin_url?>admin/cuadro">Añadir cuadro</a></li>
                   <li role="separator" class="divider"></li>
                   <li><a href="#">Cuadros eliminados</a></li>
