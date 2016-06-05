@@ -10,16 +10,6 @@
   width: 300px;
 }
 
-h3 {
-
-  font-family: 'EB Garamond', serif;
-}
-
-h3:hover {
-
-  color: #922f3e;
-}
-
 h4 {
   font-size: 15px;
 }
@@ -32,4 +22,20 @@ h5 {
 h5:hover {
 
   color: #ae4747;
+}
+
+button {
+  border: none;
+  color: #000;
+  font-family: 'EB Garamond', serif;
+  background-color: #fff;
+  text-align: left;
+  font-size: 23px;
+  padding-left: 0px;
+  /*margin: -2.5%;*/
+  margin-bottom: 3px;
+}
+
+button:hover{
+    color: #922f3e;
 }

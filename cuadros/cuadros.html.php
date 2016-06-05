@@ -90,9 +90,13 @@
          <div class="thumbnail">
            <img src="<?=$cu['foto']?>" alt="...">
            <div class="caption">
-             <h3><?=$cu['nombre']?></h3>
+             <form action="?vista_tecnica" method="post">
+               <button type="submit" name="button"><?=$cu['nombre']?></button>
+               <input type="hidden" name="id_cuadro" value="<?=$cu['id']?>">
+             </form>
              <h4><?=$cu['estilo']?> sobre <?=$cu['soporte']?></h4>
              <h5><?=$cu['pintor']?></h5>
+
            </div>
          </div>
        </div>

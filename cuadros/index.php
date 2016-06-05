@@ -48,6 +48,18 @@ if ( isset($_POST['infocuadro']) ) {
 
 }
 
+
+if ( isset($_GET['vista_tecnica']) ) {
+
+		$id_cuadro = $_POST['id_cuadro'];
+
+		$cuadro = cuadro($id_cuadro);
+
+	  require_once 'cuadro.html.php';
+		exit();
+
+}
+
 // Se cierra la sesion
 if( isset($_GET['logout']) ){
 
