@@ -8,6 +8,7 @@
     }
 ?>
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -18,8 +19,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/header.css">
-  <link rel="stylesheet" type="text/css" href="http://localhost:8080/pinacotek/css/cuadros.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/header.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/usuario.css">
   <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -83,7 +84,48 @@
       </nav>
     </div><!-- fin row -->
 
-
+    <div class="row">
+      <div class="col-lg-offset-2 col-lg-8">
+      <h1>Editar Perfil</h1>
+      <form action="?editar_perfil" method="POST">
+        <div class="col-lg-4">
+            <img src="" alt="" class="img-circle">
+            <div>
+              <label for="files"> <span class="avatar">Canbiar imagen</span></label>
+              <input style="visibility: hidden; position: absolute;" id="files" class="form-control" type="file" name="files">
+            </div>
+        </div><!-- fin col-lg-4 -->
+        <div class="col-lg-8 info">
+          <input type="text" class="form-control" name="nombre" value="">
+          <input type="text" class="form-control" name="email" value="">
+          <input type="text" class="form-control" name="pais" value="" placeholder="Pais">
+        </div>
+      </div><!-- fin col-fg-12 -->
+      <div class="col-lg-offset-2 col-lg-1">
+        <button class="btn btn-info guardar" type="submit" name="guadar">Guardar</button>
+      </div>
+    </form><!-- fin form -->
+    <div class="col-lg-2">
+      <button class="btn btn-info eliminar" type="submit" name="Eliminar">Eliminar cuenta</button>
+    </div>
+    </div><!-- fin row -->
+    <div class="row">
+      <div class="col-lg-offset-2 col-lg-8">
+          <h3>Cambiar contraseña</h3>
+      </div>
+      <div class="col-lg-offset-2 col-lg-8 pass">
+        <input type="text" class="form-control" name="pass" value="" placeholder="Contraseña">
+        <input type="text" class="form-control" name="nuevo_pass" value="" placeholder="Nueva contraseña">
+        <input type="text" class="form-control" name="confi_pass" value="" placeholder="Repetir nueva contraseña">
+        <button type="submit" class="btn btn-info guardar_pass" name="cambio_pass">Guardar</button>
+      </div>
+    </div>
  </div><!-- fin container -->
 </body>
 </html>
+
+<!--
+    Proyecto Pinacotek.
+    Realizado por javi.
+    github: https://github.com/Restyu/Pinacotek
+ -->

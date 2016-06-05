@@ -1,0 +1,72 @@
+
+h1{
+  margin-bottom: 30px;
+  font-family: 'EB Garamond', serif;
+}
+
+h3{
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 1px solid ;
+  font-family: 'EB Garamond', serif;
+  font-size: 32px;
+}
+
+img {
+  height: 90px;
+  width: 90px;
+}
+
+input{
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.avatar {
+  padding-left: 0px;
+}
+
+.info > input {
+  margin-left: -100px;
+}
+
+.guardar{
+  margin-top: 20px;
+  background: #922f3e;
+  border-color: #7e2929;
+}
+
+.guardar:hover{
+  background-color: #fff;
+  color: #922f3e;
+  border-color: #7e2929;
+}
+
+.eliminar {
+  margin-top: 20px;
+  background: #922f3e;
+  border-color: #7e2929;
+}
+
+.eliminar:hover{
+  background-color: #fff;
+  color: #922f3e;
+  border-color: #7e2929;
+}
+
+.pass > input{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.guardar_pass{
+  margin-top: 10px;
+  background: #922f3e;
+  border-color: #7e2929;
+}
+
+.guardar_pass:hover{
+  background-color: #fff;
+  color: #922f3e;
+  border-color: #7e2929;
+}
