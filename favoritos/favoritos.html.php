@@ -57,16 +57,14 @@
                 </ul>
               </li>
               <?php  if( isset($_SESSION['user']) ) : ?>
-              <li class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$user?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Configuracion</a></li>
-                  <li><a href="#">Ajustes</a></li>
-                  <li><a href="#">Acerca</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="?logout">Cerrar Session</a></li>
-                </ul>
-              </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$user?><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?=$admin_url?>usuario">Configuracion</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="?logout">Cerrar Session</a></li>
+                  </ul>
+                </li>
               <?php endif; ?>
               <?php  if( !isset($_SESSION['user']) ) : ?>
                   <li><a href="<?=$admin_url?>login">Login</a></li>

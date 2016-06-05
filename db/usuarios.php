@@ -30,9 +30,10 @@ return $usuarios;
 
 
 /**
- * Devuelve el usuario con el id que se le pasa
+ * Devuelve el usuario con el id y email que se le pasa
  *
  * @param $id id del usuario
+ * @param $email del usuario
  * @return  Array con la información del usuario.
  */
 
@@ -50,10 +51,40 @@ function login($email , $pass){
 
   } catch (Exception $e) {
 
-      die("No se han podido cargar los usuarios de la base de datos:". $e->getMessage());
+      die("No se han podido cargar el usuario de la base de datos:". $e->getMessage());
   }
 
   $usuario = $ps->fetch(PDO::FETCH_ASSOC);
 
   return $usuario;
+}
+
+
+/**
+ * Devuelve el usuario con el id que se le pasa
+ *
+ * @param $id id del usuario
+ * @return  Array con la información del usuario.
+ */
+
+function info($id){
+
+  global $pdo;
+
+  try {
+
+      $sql = 'SELECT * FROM usuarios WHERE id = :id';
+      $ps = $pdo->prepare($sql);
+      $ps->bindValue(':id', $id);
+      $ps->execute();
+
+  } catch (Exception $e) {
+
+      die("No se han podido cargar el usuario de la base de datos:". $e->getMessage());
+  }
+
+    $usuario = $ps->fetch(PDO::FETCH_ASSOC);
+
+    return $usuario;
+
 }

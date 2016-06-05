@@ -3,6 +3,7 @@
     if( isset($_SESSION['user']) ){
           $user = $_SESSION['user'];
           $id_user = $_SESSION['id'];
+
     }else{
 
     }
@@ -87,17 +88,17 @@
     <div class="row">
       <div class="col-lg-offset-2 col-lg-8">
       <h1>Editar Perfil</h1>
-      <form action="?editar_perfil" method="POST">
+      <form action="?editar_perfil" method="POST" enctype="multipart/form-data">
         <div class="col-lg-4">
-            <img src="" alt="" class="img-circle">
+            <img src="<?=$usuario['avatar']?>" alt="imagen de perfil" class="img-circle">
             <div>
-              <label for="files"> <span class="avatar">Canbiar imagen</span></label>
-              <input style="visibility: hidden; position: absolute;" id="files" class="form-control" type="file" name="files">
+              <label for="imagen"> <span class="avatar">Canbiar imagen</span></label>
+              <input style="visibility: hidden; position: absolute;" id="imagen" class="form-control" type="file" name="imagen">
             </div>
         </div><!-- fin col-lg-4 -->
         <div class="col-lg-8 info">
-          <input type="text" class="form-control" name="nombre" value="">
-          <input type="text" class="form-control" name="email" value="">
+          <input type="text" class="form-control" name="nombre" disabled value="<?=$usuario['nombre']?>">
+          <input type="text" class="form-control" name="email"  disabled value="<?=$usuario['email']?>">
           <input type="text" class="form-control" name="pais" value="" placeholder="Pais">
         </div>
       </div><!-- fin col-fg-12 -->
