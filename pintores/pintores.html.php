@@ -18,6 +18,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/header.css">
   <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/pintores.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/footer.css">
   <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -91,7 +92,7 @@
           </form>
        </div>
      </div>
-   </div>
+   </div><!-- fin row -->
 
    <div class="row">
      <div class="col-lg-offset-1 col-lg-10">
@@ -111,8 +112,8 @@
        </div>
       <?php endforeach; ?>
      </div>
-   </div>
-
+   </div><!-- fin row -->
  </div><!-- fin container -->
+  <?php require_once 'templates/footer.html.php' ?>
 </body>
 </html>

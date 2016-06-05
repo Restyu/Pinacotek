@@ -1,0 +1,23 @@
+footer {
+  background: #000;
+  height: 50px;
+  width: 100%;
+  padding-top: 18px;
+}
+
+.copy{
+  margin-left: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.admin {
+  color: #874337;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.admin:hover{
+  color: #922f3e;
+}

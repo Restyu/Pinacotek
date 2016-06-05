@@ -20,6 +20,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/header.css">
   <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/favoritos.css">
+  <link rel="stylesheet" type="text/css" href="<?=$admin_url?>css/footer.css">
   <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -97,7 +98,7 @@
       <?php endforeach; ?>
      </div>
    </div>
-
  </div><!-- fin container -->
+ <?php require_once '../templates/footer.html.php' ?>
 </body>
 </html>
