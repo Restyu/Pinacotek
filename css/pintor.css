@@ -67,6 +67,12 @@ button:hover{
   display: inline-block;
 }
 
+.tags:hover{
+  color: #922f3e;
+  background-color: #fff;
+  border-color: #922f3e;
+}
+
 .obras {
   text-align: center;
   color: #000;

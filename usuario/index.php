@@ -42,4 +42,16 @@ if( isset($_GET['editar_perfil']) ){
   move_uploaded_file($file_tmp, $base_imagen_path . $file_name);
 }
 
+if( isset($_GET['logout']) ){
+
+    // Se destruye la variable de sesión
+    unset($_SESSION['user']);
+
+    // Se destruye la sessión
+    session_destroy();
+
+    // Se redirige a la página login
+    header("Location: ".$base_url.'/login');
+}
+
 require_once 'usuario.html.php';

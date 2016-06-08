@@ -44,17 +44,6 @@
               <?php  if( isset($_SESSION['user']) ) : ?>
                 <li><a href="<?=$admin_url?>favoritos">Colección</a></li>
               <?php endif; ?>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museos <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Lista museos</a></li>
-                  <li><a href="#">Nuevo Museo</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Localizaciones</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Mapa</a></li>
-                </ul>
-              </li>
               <?php  if( isset($_SESSION['user']) ) : ?>
               <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$user?><span class="caret"></span></a>
@@ -81,20 +70,6 @@
     </div><!-- fin row -->
 
    <div class="row">
-     <div class="col-lg-offset-1 col-lg-10 resultados-widgets">
-       <div class="col-lg-3">
-         <h4>23 Pintores</h4>
-       </div>
-       <div class="col-lg-7">
-          <h4>orden</h4>
-          <form action="index.html" method="post">
-
-          </form>
-       </div>
-     </div>
-   </div><!-- fin row -->
-
-   <div class="row">
      <div class="col-lg-offset-1 col-lg-10">
        <?php foreach($pintores as $pi): ?>
        <div class="col-sm-5 col-md-3 galeria">
@@ -103,7 +78,6 @@
            <div class="caption">
              <form id="pintor" action="?pintor" method="post">
                <input type="hidden" name="id" value="<?=$pi['id']?>">
-               <?php echo  $pi['id']?>
                <!-- <a href="#" onclick="document.getElementById('pintor').submit()"><?=$pi['nombre']?></a> -->
                <button type="submit" name="enviar"><?=$pi['nombre']?></button>
              </form>

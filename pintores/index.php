@@ -5,7 +5,7 @@ require_once 'db/connectdb.php';
 require_once 'db/pintores.php';
 require_once 'db/cuadros.php';
 
-//session_start();
+// session_start();
 
 if( isset($_GET['logout']) ){
 

@@ -46,17 +46,6 @@
               <?php  if( isset($_SESSION['user']) ) : ?>
                 <li><a href="<?=$admin_url?>favoritos">Colección</a></li>
               <?php endif; ?>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museos <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Lista museos</a></li>
-                  <li><a href="#">Nuevo Museo</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Localizaciones</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Mapa</a></li>
-                </ul>
-              </li>
               <?php  if( isset($_SESSION['user']) ) : ?>
                 <li class="dropdown">
                   <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$user?><span class="caret"></span></a>
@@ -99,6 +88,5 @@
      </div>
    </div>
  </div><!-- fin container -->
- <?php require_once '../templates/footer.html.php' ?>
 </body>
 </html>
