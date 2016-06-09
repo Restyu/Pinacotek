@@ -86,7 +86,7 @@
 
       <div class="col-lg-5">
             <h1>Pintor</h1>
-            <h2><?=$cuadro['nombre']?></h2>
+            <h2><?=$cuadro['pintor']?></h2>
             <h1>Titulo</h1>
             <h2><?=$cuadro['nombre']?></h2>
             <h1>Fecha</h1>

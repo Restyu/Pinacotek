@@ -38,7 +38,7 @@ function cuadro($id){
   global $pdo;
 
   try {
-      $sql = 'SELECT * FROM cuadros WHERE id = :id';
+      $sql = 'SELECT pintores.nombre as pintor, cuadros.nombre , cuadros.id , cuadros.dimensiones , cuadros.year , cuadros.tema , cuadros.siglo , cuadros.estilo , cuadros.soporte , cuadros.foto FROM cuadros join pintores on pintores.id = cuadros.id_pintor WHERE cuadros.id = :id';
       $ps = $pdo->prepare($sql);
       $ps->bindValue(':id', $id);
       $ps->execute();

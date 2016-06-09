@@ -13,7 +13,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pinacotek | Admin</title>
+  <title>Pinacotek | Configuracion</title>
   <link rel="stylesheet" type="text/css" href="css/resert.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
   <!-- Link alternativo al de arriba por si no carga  -->
@@ -61,9 +61,9 @@
                   <li><a href="<?=$admin_url?>login">Login</a></li>
               <?php endif; ?>
               <div class="input-group busqueda col-lg-3">
-                <input type="text" class="form-control" placeholder="pintores , cuadros ...">
+                <input type="text" class="form-control busqueda" placeholder="pintores , cuadros ...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  <button class="btn btn-default busqueda-boton" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </span>
               </div><!-- /input-group -->
             </ul><!-- nav navbar-nav navbar-right col-lg-7 -->
@@ -77,7 +77,7 @@
       <h1>Editar Perfil</h1>
       <form action="?editar_perfil" method="POST" enctype="multipart/form-data">
         <div class="col-lg-4">
-            <img src="<?=$usuario['avatar']?>" alt="imagen de perfil" class="img-circle">
+            <img src="<?=$usuario['avatar']?>" class="img-circle">
             <div>
               <label for="imagen"> <span class="avatar">Canbiar imagen</span></label>
               <input style="visibility: hidden; position: absolute;" id="imagen" class="form-control" type="file" name="imagen">

@@ -70,3 +70,11 @@ input{
   color: #922f3e;
   border-color: #7e2929;
 }
+
+.busqueda {
+  margin-top: 4px;
+}
+
+.busqueda-boton {
+  margin-top: 4px;
+}
