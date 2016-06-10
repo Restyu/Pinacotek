@@ -20,7 +20,7 @@
           <input type="text" name="nombre" value="" placeholder="Nombre de usuario" required="">
           <input type="password" name="pass1" value="" placeholder="Contraseña" required="">
           <input type="password" name="pass2" value="" placeholder="Confirmar contraseña" required="">
-          <button type="submit" name="inicio">Registrate</button>
+          <button type="submit" class="boton-registrarse" name="inicio">Registrate</button>
         </form>
       </div><!-- fin login -->
     </div><!-- fin container -->

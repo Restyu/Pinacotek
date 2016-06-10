@@ -36,34 +36,19 @@
                     <input type="hidden" name="lista" value="8">
                     <button class="listacuadros" type="submit" name="button">Lista cuadros</button>
                   </form>
-
-                  <li><a href="<?=$admin_url?>admin/cuadro">Añadir cuadro</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Cuadros eliminados</a></li>
+                  <li><a href="<?=$admin_url?>admin/cuadro">Añadir cuadro</a></li>
                 </ul>
               </li>
               <li><a href="<?=$admin_url?>admin/usuarios">Usuarios</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Museos <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Lista museos</a></li>
-                  <li><a href="#">Nuevo Museo</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Localizaciones</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Mapa</a></li>
-                </ul>
-              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuario <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Configuracion</a></li>
-                  <li><a href="#">Ajustes</a></li>
-                  <li><a href="#">Acerca</a></li>
+                  <li><a href="<?=$admin_url?>/usuario">Configuracion</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">Cerrar session</a></li>
+                  <li><a href="<?=$admin_url?>/cuadros?logout">Cerrar session</a></li>
                 </ul>
               </li>
             </ul>

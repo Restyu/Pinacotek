@@ -5,7 +5,7 @@ require_once 'templates/header.html.php';
 // Si accedemos a la página welcome: http://localhost:8080/pinacotek/admin/pintor
 // sin habernos logueado, nos redirigirá a la página de error
 if( isset($_SESSION['user']) == 'admin' ){
-    
+
     $user = $_SESSION['user'];
     if ($user == 'admin') {
 
@@ -62,31 +62,6 @@ header('Location: '.$base_url);
           <button type="submit" class="btn btn-primary">Añadir</button>
         </form>
       </div><!--FIN DIV COL-LG-5 -->
-      <div class="col-lg-7">
-        <h2>Registro de pintores</h2>
-          <div class="lista table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>apellido</th>
-                  <th>F.nacimineto</th>
-                  <th>pais</th>
-                  <th>ciudad</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>*****</td>
-                  <td>*****</td>
-                  <td>*****</td>
-                  <td>*****</td>
-                  <th>*****</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div><!--FIN DIV COL-LG-7 -->
       </div><!--FIN DIV COL-LG-12 -->
     </div><!--fin div row -->
 </body>
