@@ -58,12 +58,12 @@
               <?php  if( !isset($_SESSION['user']) ) : ?>
                   <li><a href="<?=$admin_url?>login">Login</a></li>
               <?php endif; ?>
-              <div class="input-group busqueda col-lg-3">
+              <!-- <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control" placeholder="pintores , cuadros ...">
                 <span class="input-group-btn">
                   <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </span>
-              </div><!-- /input-group -->
+              </div><!-- /input-group --> -->
             </ul><!-- nav navbar-nav navbar-right col-lg-7 -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

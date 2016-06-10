@@ -60,12 +60,12 @@
               <?php  if( !isset($_SESSION['user']) ) : ?>
                   <li><a href="<?=$admin_url?>login">Login</a></li>
               <?php endif; ?>
-              <div class="input-group busqueda col-lg-3">
+              <!-- <div class="input-group busqueda col-lg-3">
                 <input type="text" class="form-control busqueda" placeholder="pintores , cuadros ...">
                 <span class="input-group-btn">
                   <button class="btn btn-default busqueda-boton" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </span>
-              </div><!-- /input-group -->
+              </div><!-- /input-group --> 
             </ul><!-- nav navbar-nav navbar-right col-lg-7 -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -102,9 +102,9 @@
           <h3>Cambiar contraseña</h3>
       </div>
       <div class="col-lg-offset-2 col-lg-8 pass">
-        <input type="text" class="form-control" name="pass" value="" placeholder="Contraseña">
-        <input type="text" class="form-control" name="nuevo_pass" value="" placeholder="Nueva contraseña">
-        <input type="text" class="form-control" name="confi_pass" value="" placeholder="Repetir nueva contraseña">
+        <input type="text" class="form-control" disabled name="pass" value="" placeholder="Contraseña">
+        <input type="text" class="form-control" disabled name="nuevo_pass" value="" placeholder="Nueva contraseña">
+        <input type="text" class="form-control" disabled name="confi_pass" value="" placeholder="Repetir nueva contraseña">
         <button type="submit" class="btn btn-info guardar_pass" name="cambio_pass">Guardar</button>
       </div>
     </div>
