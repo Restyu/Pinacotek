@@ -26,22 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `cuadros`
 --
 
-CREATE TABLE `cuadros` (
-  `id` int(11) NOT NULL,
-  `id_pintor` int(11) DEFAULT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `year` int(11) NOT NULL,
-  `dimensiones` varchar(255) NOT NULL,
-  `soporte` varchar(255) NOT NULL,
-  `tema` varchar(255) NOT NULL,
-  `estilo` varchar(255) NOT NULL,
-  `siglo` varchar(50) NOT NULL,
-  `foto` varchar(255) NOT NULL,
-  `creado` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `editado` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
 -- Volcado de datos para la tabla `cuadros`
 --
 
@@ -74,30 +59,3 @@ INSERT INTO `cuadros` (`id`, `id_pintor`, `nombre`, `year`, `dimensiones`, `sopo
 
 --
 -- Indices de la tabla `cuadros`
---
-ALTER TABLE `cuadros`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_pintor` (`id_pintor`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `cuadros`
---
-ALTER TABLE `cuadros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `cuadros`
---
-ALTER TABLE `cuadros`
-  ADD CONSTRAINT `cuadros_ibfk_1` FOREIGN KEY (`id_pintor`) REFERENCES `pintores` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
